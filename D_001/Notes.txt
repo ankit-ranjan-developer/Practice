@@ -1,0 +1,9 @@
+Today I am learning about what is Node.js. 
+
+Node.js is a runtime environment of js.
+
+1) I used one native node module fs (file system) and used it to create a message.txt. 
+Write in that file using fs.WriteFile and read the content through fs.readFile
+
+2) I used npm (Node package manager) and use two package sillyname and superheroes to create a simple project. 
+
