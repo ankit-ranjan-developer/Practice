@@ -7,3 +7,8 @@ Write in that file using fs.WriteFile and read the content through fs.readFile
 
 2) I used npm (Node package manager) and use two package sillyname and superheroes to create a simple project. 
 
+3) I have made a qr code generator where it takes the input from cli and convert that into a qr code. 
+
+node module used:- 
+a. qr-image
+b. @inquirer/prompts
