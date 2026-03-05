@@ -1,0 +1,16 @@
+today! I am going to practice express.js that is a node package used to build server using javascript. 
+
+It is an undisputed framework to make server. 
+
+We are using express.js beacuse node.js is a powerful runtime. It can be used to create various things. But since we want to make only
+server. So, We will use it. 
+
+express syntax
+
+app.method(path, handler);
+
+method :- all the five http method, GET, POST, PUT, PATCH, DELETE
+
+path:- route that trigers the specific backend logic. 
+
+handler:- the request, response cycle. (req, res) => {}
