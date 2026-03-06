@@ -1,0 +1,13 @@
+this is used to learn middleware in Express.js. Middleware are basically functions that sits in between route and client and does certain 
+things with the request from users before it get processed by routes. (basically backend logic).
+
+I am going to just create a basic middleware. 
+
+then, use two middlewares from npm (node pakage manager). these are 1) bady parser 2) morgon etc. 
+
+but before that,what is  __dirname?
+
+note:- when we store files on a server. it is very difficult to give the absoulte path of the files. since we don't know where our files will be stored
+to solve that we have used this method. SO THAT, our files can have a relative location and we can use it to access our files. 
+
+
