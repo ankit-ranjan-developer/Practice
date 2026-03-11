@@ -1,0 +1,16 @@
+<%- (include("partials/header.ejs")) %>
+
+<main>
+
+    <% if(locals.Name) {%>
+       <h1> <%= Name %> </h1>
+    <% } else { %>
+        <h1> Generate Name!!! </h1>
+    <% } %>
+
+    <form action="/submit" method="post">
+        <input type="submit" value="Generate name">
+    </form>
+</main>
+
+<%- (include("partials/footer.ejs")) %>
