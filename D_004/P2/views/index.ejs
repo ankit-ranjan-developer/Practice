@@ -1,0 +1,32 @@
+<%- (include("partials/header.ejs")) %>
+
+<main>
+
+    <%# ejs Comments %>
+
+    <h1> <%= tittle %> </h1>
+
+    <p> seconds :  <%= seconds %> </p>
+
+    <% if(seconds % 2 === 0) { %>
+
+    <% for(var i = 0; i < 3; i++) { %>
+
+        <li>
+            <%= items[i] %>
+        </li>
+
+        <% } %>
+
+    <% } %>
+    <br>
+
+    <p> <%= items %> </p>
+
+    <%- htmlcontent %>
+
+</main>
+<br />
+
+<%- (include("partials/footer.ejs")) %>
+

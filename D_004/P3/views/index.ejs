@@ -1,0 +1,18 @@
+<%- (include("partials/header.ejs")) %>
+
+<main>
+
+    <% if(locals.Name) { %>
+        <p> hello my name is <%= Name %> </p>
+        <p> Name length : <%= length %> </p>
+    <% } else { %>
+
+        <form action="/submit" method="post"> 
+            <input type="text" name="fname" placeholder="enter your first name">
+            <input type="text" name="lname" placeholder="enter your last name">
+            <input type="submit" value="submit">
+        </form>
+    <% } %> 
+</main>
+
+<%- (include("partials/footer.ejs")) %>
