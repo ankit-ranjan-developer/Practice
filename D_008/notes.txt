@@ -1,0 +1,174 @@
+Hello, this section i will use to study about postgresql. The postgresql is a relational database that is used to store data.
+I am using this database to study about CRUD applications. 
+
+So, first I will be study the commands that are used in postgresql.
+
+Now, there are two things that i need to download to run my postgresql databse. 
+they are postgresql server and pgclient. 
+
+postgresql is used to convert my local device into a postgresql database server. It will listen to the port 5432. 
+then, there are two ways to interact with the database server. they are postgresql CLI(command line interface) or the UI provided 
+by the postgresql to manage this things that is the pgclient admin panel. It is a better and enhanced way of using the CLI to create 
+and manage database. 
+
+what am i going to do in this exercise. 
+
+1) first, I will learn about SQL(Standarad Query Language). It is like a standarad language to manage database. It is a language, not 
+a database. Programmers uses the lanaguge to interact with their database.
+
+2) Then, start using a actual database that is postgresql which is a very popular database. I will use it to create and manage databases.
+
+3) Then, I will use a npm pakage that is "pg" from npm. It will be used to interact with my web apps. I will make a server that will be 
+listening to a port at 5432. My web app will interact with my database. I will use the JSON format for this. 
+
+4) This will be a basic CRUD app and nothing else. But it is great in the beginning for learning backend. 
+
+What is CRUD?
+
+CRUD stands for 
+C - Create
+R - Read 
+U - Update 
+D - Delete
+
+SQl commands for basic CRUD Operations. 
+
+DDL commands
+
+1) Create tables
+
+CREATE TABLE STUDENT (
+    roll_no int,
+    name varchar(20),
+    class char(1),
+    PRIMARY KEY(id)
+);
+
+2) INSERT data
+
+INSERT INTO STUDENT(roll_no, name, class)
+VALUES(1,"Ankit", 'A');
+VALUES(2,"Achint", 'B');
+VALUES(3,"Akhlaque", 'A');
+
+
+DML commands
+
+
+1) SELECT command:- 
+
+// select all from table.
+
+SELECT * FROM Student;
+
+// select single/mutliple fields from table. 
+
+SELECT id, name FROM STUDENT;
+
+// select a field/ fields from table with a ceratin condition. 
+
+SELECT id, name 
+FROM STUDENT
+WHERE (id == 1);
+
+2) UPDATE commands
+
+UPDATE STUDENT 
+SET id = 4, class = 'C'
+WHERE (id == 2)
+
+3) DELETE command 
+
+DELETE FROM STUDENT
+WHERE (id == 3)
+
+4) DROP command
+
+DROP TABLE STUDENT
+
+FOREIGN KEYS:- 
+
+CREATE TABLE PRODUCTS (
+    id SERIAL,
+    customer_id INT, 
+    product_id INT, 
+    PRIMARY KEY(id),
+    FOREIGN KEY (customer_id) REFERENCE customers(id),
+    FOREIGN KEY (product_id) REFERENCE products(id)
+);
+
+Repractising commands:- 
+
+the SQL commands can be divided into :- DDL AND DML commands, 
+
+DDL commands:- Data defination language are those commands that are used to define the tables. 
+
+1) CREATE commands
+
+CREATE TABLE customers (
+    id INT,
+    name TEXT,
+    address TEXT
+); 
+
+2) ALTER commands
+
+ALTER TABLE customers
+ADD product TEXT 
+
+3) DROP TABLE customers
+
+DML :- data manipulation lanaguge are the set of commands in SQL that are used to manipulate the data inside the table. 
+
+1) INSERT commands
+
+INSERT INTO TABLE customers (id, name, address)
+VALUES (1, "Ankit", "North nawada bihar")
+VALUES (2, "Akhlaque", "Bokaro, jharkhand")
+VALUES (3, "Shivam", "North purenea")
+
+2) Select commands 
+
+SELECT * FROM customers;
+
+SELECT name form customers;
+
+SELECT id, name from customers
+WHERE (name == "Ankit");
+
+3) UPDATE commands 
+
+UPDATE customers 
+SET id = 4, name = "shivam"
+WHERE (name = "Achint");
+
+4) Delete commands
+
+Delete * from customers;
+
+Delete from customers
+where (id == 1);
+
+Foreign key
+
+CREATE TABLE PRODUCTS (
+    id INT, 
+    customer_id INT, 
+    product_id INT, 
+    PRIMARY KEY(id), 
+    FOREIGN KEY customer_id REFERENCE customers(id) 
+);
+
+Let's jump to postgresql.
+
+I am going to practice the postgresql commands by building a few tables. 
+
+
+
+
+
+
+
+
+
+
