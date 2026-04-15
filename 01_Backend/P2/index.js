@@ -13,4 +13,3 @@ console.log(superheroes[random]);
 import {randomSuperhero} from 'superheroes';
 var hero = randomSuperhero();
 console.log(hero);
-

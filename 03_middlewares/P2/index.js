@@ -10,9 +10,8 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended : true }));
-// app.use(bodyParser.urlencoded());
+
 app.use(morgan("tiny"));
-console.log("-----------------------------");
 app.use(morgan("combined"));
 
 console.log(__dirname);

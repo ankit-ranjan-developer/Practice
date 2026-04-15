@@ -1,0 +1,49 @@
+From this repository, I am going to start the API. 
+
+API -- it starts for Application programming interface, we know that the world is full of softwares. So, there is always a need 
+for different softwares to communicate with each other inorder to exchange data and services 
+
+benefits of API:- 
+
+1) It allows different softwares to talk with each other. 
+
+2) If not, everyone has to recreate the same software again and again. For example, the uber needs the google maps to operate their 
+business. So. there are two things that uber can do. first they can create their own maps that will be costly and they wil require a 
+team to continously manage their service, realted to bugs, security and updates. 
+
+3) but there is also an another method that google maps can expose some parts of their server(Public API) and provide its documentation 
+to uber reagarding how to make request to their server and how they will get the response. they provide the structure of the request and 
+response and uber can use to make request and get response. By this way, they donot need to make an another google maps to operate their 
+business, saving a lot of cost, time and headache. 
+
+API are of two types:- 
+
+1) Private API :- Our backend is nothing but a collection of Private APIs. It is because, our code is npt exposed. 
+
+2) Public API:- In this, some of the backend codes is exposed to the user. 
+
+Now, the API follows various different architecture. But I am going to learn only one popular archietecture that is RESTAPI architecture. 
+In REST archietecture, we use the JSON format to communicate with each other and provide neccessary data and services.
+
+JSON stands for Javascript object notation, it is a very popular format to send data packets over the internet. 
+
+There are two popular commands that we need to remember:- 
+
+1) JSON.strigfy(data). {JS object --> JSON }
+1) JSON.parse(data). {JSON --> JS object}
+
+My first pratice program:- 
+
+In this, I had a JSON string that I supposed, I got from somewhere and then, I converted it into an object and used the dot operater 
+to show data to the user using the ejs file. 
+
+My second pratice program:- 
+
+In this, I used a Public API, {"https://bored-api.appbrewery.com"} 
+Also, I started using a npm package named AXIOS which is a very popular package to handle the works related to API, axios is used to make 
+a request to the public API and it simplifies the process a lot. It makes the request making and getting response so much easy. 
+By using them, I made a few request on this API and goyt the response and used the response to show something to the user. 
+
+1) Async and await :- 
+
+2) try and catch :- 

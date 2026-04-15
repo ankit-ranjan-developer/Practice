@@ -18,25 +18,21 @@ app.get("/", (req,res) => {
     // res.sendFile(__dirname + "/public/index.html");
     // res.sendFile(__dirname + "/public/index.html");
     // res.render("index.ejs"); 
-    // these two will not execute, it can only send on res object back to client. 
+    // these two will not execute, it can only send one res object back to client. 
     let mess = ""; // both are block- specific. one (let) can change but other (const) cann't. 
     
     if(num == 1) {
-        // const today = new Date; 
-        // console.log(today);
-        // console.log(today.getDay());
-        // const day = today.getDay();
+        const today = new Date; 
+        console.log(today);
+        const day = today.getDay();        
+        console.log(day);
         
         //  the diff btw var, let and const. 
-        
         // var mess = ""; for entire block 
-        
         // both let and const are block- specific. one (let) can change but other (const) cann't
         // const mess = ""; --> error! cann't be changed later. 
-        // let mess = ""; --> cann't place let here. since mess is outside if-else block. 
-        
-        const today = 0;
-        if(today == 0 || today == 6){
+        // let mess = ""; --> cann't place let here. since mess is outside if-else block.
+        if(day == 0 || day == 6){
             mess = "it's a weekend! enjoy it"
         } else {
             mess = "It's just a normal day. Get to work!";

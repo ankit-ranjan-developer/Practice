@@ -1,0 +1,59 @@
+This repostory is used to pratice a templeting language called EJS.  It is very popular templating language for JS.
+It is used to create dynamic website. 
+
+It works like this. We know that all the previous websites that we built were generally staic website. It means that there 
+are just static. It means they can just be used to show content that would not change but what about dynamic website, teh content 
+does change. For example, when we signed in a dynamic website. It show welcome ANKIT RANJAN! how are these things are pulled in 
+website. This is how they are done using a templating language like EJS. 
+
+Important things that I learnt while practicing:- 
+
+1) a single route can recieve and sent only one request or response object. 
+
+app.get("/", (req,res) => {
+    // res.sendFile(__dirname + "/public/index.html");
+    // res.sendFile(__dirname + "/public/index.html");
+    // res.render("index.ejs");
+}
+
+there are two res object being sent by this route. It will not work.
+
+2) Th difference btw var, let and const in JS 
+
+var - globally accessible and can change.
+const - locally accessible and cannot change.
+let - locally accessible and can change.
+
+My first pratice project:- 
+In the first pratice program, I just sent messeage from server to the ejs file to see how renedering happens. 
+
+My second practice project:- 
+In the second project, I created a object named data and sent it to ejs and used the (.) dot operator to access values and render
+it on ejs file. 
+
+My third practice project:- 
+In my third project, I made the data to flow from both sides. It was flowing from frontend ejs file to the index.js(server side) and 
+some process was performed on teh data and again it was render on teh ejs file. 
+
+My fourth project:-
+In my fourth practice project, I just made a fun "generate name" project which generate random names using Math.random().
+
+I also learnt, 
+
+what are partials?
+
+partials are a block of repetative code that you write once in a file and use <%-include("/* file location*/") %> to attach in 
+every other file where the code repeates. It saves time and reduces repeattive code, easier debugging. 
+
+these are important things for me to remember:-
+
+1) <%= %> --> variable 
+2) <%- %> --> html code / attach partials using include.  
+3) <% %> --> JS code / show ejs. 
+4) <%# %> --> comments 
+  
+
+
+
+
+
