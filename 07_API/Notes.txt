@@ -1,0 +1,15 @@
+This repository is made to improve my knowledge on the API working.
+
+There are two practice project that i am going to make here. 
+
+First pratice project:- 
+
+In this practice project, I have developed an server, Which i am going to access using the postman app to make request on the server and get a response. 
+By using this, I am going to make the server into a working API who listens to the request and send response. 
+
+Second practice project:- 
+
+In this pratice project, I have developed two server files, One is server.js and other one is api.js. So, the server.js acts as my backend
+and index.js acts as an API which will be used to make the request and get a response. I have made a blog application which use an API
+to store and access data and server is connected to the ejs file and which is used to dynamically display content in teh ejs file. 
+
