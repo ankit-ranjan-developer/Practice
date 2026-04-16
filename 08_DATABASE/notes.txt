@@ -161,7 +161,19 @@ CREATE TABLE PRODUCTS (
 
 Let's jump to postgresql.
 
-I am going to practice the postgresql commands by building a few tables. 
+I am going to practice the postgresql commands by building a few tables.
+
+First practice project contains three index.js file that are used to make the make the request on the postgresql server and get the resonse 
+of all the data that is present in the tables. 
+
+1) countries capitals
+2) capitals codes
+2) countries flags
+
+In the second practice project, I am going to build a project that shows you the countries name and you have to fill its capital and 
+check if you are right ot wrong. 
+
+
 
 
 
