@@ -1,0 +1,20 @@
+<%-(include("partials/header.ejs")) %>
+   <main>
+    <h1>My Blog</h1>
+    <a href="/new">New Post</a>
+    <div>
+      <% if (locals.data) { %>
+         <% for(let i = 0; i < data.length; i++) { %> 
+               <div style="border: 1px solid red; margin: 10px;">
+                  <h1> <%= data[i].title %> </h1>
+                  <h1> <%= data[i].content %></h1>
+                  <h1> <%= data[i].author %> </h1>
+                  <h1> <%= data[i].date %> </h1>
+                  <a href="/edit/<%= data[i].id %>">Edit</a>
+                  <a href="/delete/<%= data[i].id %>">Delete</a>
+               </div>
+         <% } %>
+      <% }%>
+    </div>
+   </main> 
+<%- (include("partials/footer.ejs")) %>

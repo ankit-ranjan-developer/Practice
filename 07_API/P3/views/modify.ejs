@@ -1,0 +1,22 @@
+<%-(include("partials/header.ejs")) %>
+<main>
+    <h1> <%= heading %></h1>
+    <%# local.data to hqandle teh edit section and else to handle to create the new post section. %>
+    <% if(locals.data) { %>
+        <form action="/changepost" method="post">
+            <input type="text" name="title" id="" value="<%= data.title %>">
+            <textarea name="content" id=""> <%= data.content %> </textarea>
+            <input type="text" name="author" id="" value=" <%= data.author %> ">
+            <button type="submit"> <%= submit %> </button>
+        </form>
+    <% } else { %>
+        <form action="/newpost" method="post">
+            <input type="text" name="title" id="" placeholder="title">
+            <textarea name="content" id="" placeholder="content"></textarea>
+            <input type="text" name="author" id="" placeholder="author">
+            <button type="submit"><%= submit %></button>
+            <!-- <input type="button" value="submit"> -->
+        </form>
+    <% } %>
+</main>
+<%-(include("partials/footer.ejs")) %>

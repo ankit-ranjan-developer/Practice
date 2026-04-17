@@ -13,3 +13,8 @@ In this pratice project, I have developed two server files, One is server.js and
 and index.js acts as an API which will be used to make the request and get a response. I have made a blog application which use an API
 to store and access data and server is connected to the ejs file and which is used to dynamically display content in teh ejs file. 
 
+Third pratcice project:- 
+
+I have recreated the project once again on my own without taking any help from angela's Yu course. I have tried to build this project,
+without any format specified by her. This is the project that i am going to build from end to end, acting as a full stack developer. 
+

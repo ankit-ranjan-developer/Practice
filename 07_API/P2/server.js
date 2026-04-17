@@ -26,12 +26,27 @@ app.get("/", async (req, res) => {
   }
 });
 
+// These both are meant to handle the creating new post part.
+
 app.get("/new", (req,res) => {
     res.render("modify.ejs", {
         heading : "New Post",
         submit : "Create Post",
     });
 });
+
+app.post("/api/posts", async(req,res) => {
+  console.log(req.body);
+  try {
+    const response = await axios.post(API_URL + "posts", req.body);
+    const result = response.data;
+    res.render("index.ejs", {posts : result});
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching post" });
+  }
+});
+
+// These both are meant to handle editing. 
 
 app.get("/edit/:id", async(req,res) => {
     try {
@@ -47,17 +62,6 @@ app.get("/edit/:id", async(req,res) => {
     }
 });
 
-app.post("/api/posts", async(req,res) => {
-  console.log(req.body);
-  try {
-    const response = await axios.post(API_URL + "posts", req.body);
-    const result = response.data;
-    res.render("index.ejs", {posts : result});
-  } catch (error) {
-    res.status(500).json({ message: "Error fetching post" });
-  }
-});
-
 app.post("/api/posts/:id", async(req,res) => {
   try {
     console.log(req.body);
@@ -70,6 +74,8 @@ app.post("/api/posts/:id", async(req,res) => {
     res.status(500).json({message : "error fetching post"});
   }
 });
+
+// this is meant to handle the delete part. 
 
 app.get("/api/posts/delete/:id", async(req,res) => {
   try {
