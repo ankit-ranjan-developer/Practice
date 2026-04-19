@@ -49,6 +49,8 @@ app.post("/newpost", async (req, res) => {
   }
 });
 
+// Updaqting data on blogpost.
+
 app.get("/edit/:id", async (req, res) => {
     console.log(req.params.id);
   try {
@@ -66,9 +68,28 @@ app.get("/edit/:id", async (req, res) => {
   }
 });
 
-app.post("/changepost", async(req,res) => {
-    const response = await axios.patch(API_URL + "/api/changepost", )
+app.post("/changepost/:id", async(req,res) => {
+    console.log("hello");
+    try {
+      const response = await axios.patch(API_URL + "/api/changepost/" + req.params.id, req.body);
+      const result = response.data;
+      res.redirect("/");
+    } catch (error) {
+      console.log("error fetching data : ", error.message);
+      res.status(404).send("No response from API server!!!");
+    }
 })
+
+app.get("/delete/:id", async(req,res) => {
+  try {
+    const response = await axios.delete(API_URL + "/deletepost/" + req.params.id);
+    const result = response.data;
+    res.redirect("/");
+  } catch (error) {
+    console.log("error fetching data : ", error.message);
+    res.status(404).send("No response from API server!!!");
+  }
+});
 
 app.listen(port, () => {
   console.log("the server is listening at port " + port);

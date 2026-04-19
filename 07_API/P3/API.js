@@ -69,8 +69,29 @@ app.get("/getspecificpost/:id", (req,res) => {
   res.json(foundpost);
 });
 
-app.patch("/api/changepost", (req,res) => {
+app.patch("/api/changepost/:id", (req,res) => {
+  console.log("I am changepost");
+  const changeid = req.params.id;
+  const foundpost = posts.find((e) => e.id == changeid);
+  console.log(foundpost);
+  const replacementpost = {
+    id : foundpost.id,
+    title : req.body.title || foundpost.title,
+    content : req.body.content || foundpost.content,
+    author: req.body.author || foundpost.author,
+    date : new Date(),
+  };
 
+  posts[changeid - 1] = replacementpost;
+  res.json(posts);
+});
+
+app.delete("/delete/:id", (req,res) => {
+  const deletepostid = req.params.id;
+  const index = posts.findIndex((e) => e.id == deletepostid);
+  if(index === -1) return res.status(404).json({ message: "Post not found" });
+  posts.splice(index,1);
+  res.json({message : "post deleted!!"});
 });
 
 app.listen(port, () => {

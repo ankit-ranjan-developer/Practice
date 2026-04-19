@@ -3,7 +3,7 @@
     <h1> <%= heading %></h1>
     <%# local.data to hqandle teh edit section and else to handle to create the new post section. %>
     <% if(locals.data) { %>
-        <form action="/changepost" method="post">
+        <form action="/changepost/ <%= data.id %>" method="post">
             <input type="text" name="title" id="" value="<%= data.title %>">
             <textarea name="content" id=""> <%= data.content %> </textarea>
             <input type="text" name="author" id="" value=" <%= data.author %> ">
